@@ -1,0 +1,39 @@
+#include<iostream>
+using namespace std;
+ int main(){
+long age,id;
+string name;
+int adress;
+cout<<"enter your name"<<endl;
+cin>>name;
+cout<<"enter your age"<<endl;
+cin>>age;
+cout<<"enter numeric election ward for your address"<<endl;
+cin>>adress;
+cout<<"enter your voting id."<<endl;
+cin>>id;
+if(age>=18){
+if(adress==1){
+cout<<name<<",You are eligble to vote from SOUTH MUMBAI-1 with your voting ID as "<<id<<endl;
+    
+}
+if(adress==2){
+cout<<name<<",You are eligble to vote from CENTRAL MUMBAI with your voting ID as "<<id<<endl;
+    
+}
+if(adress==3){
+cout<<name<<",You are eligble to vote from NAVI MUMBAI with your voting ID as "<<id<<endl;
+    
+}
+if(adress==4){
+cout<<name<<",You are eligble to vote from DHARAVI with your voting ID as "<<id<<endl;}
+}
+else {
+cout<<name<<",You are not alegible to vote in these  elections."<<endl;
+}
+return 0;
+}
+
+
+
+
