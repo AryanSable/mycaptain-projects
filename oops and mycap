@@ -1,0 +1,47 @@
+#include <iostream>
+#include<iomanip>
+
+using namespace std;
+class tym{
+        public:
+        double hour,min,sec;
+        void get(){
+            cout<<"Enter the hours:";
+            cin>>hour;
+            if(hour>12){
+                cout<<"Invalid input."<<endl;
+                cout<<"please re-enter"<<endl;
+                cin>>hour;
+            }
+            cout<<"Enter the minutes:";
+            cin>>min;
+            if(min>60){
+                cout<<"Invalid input."<<endl;
+                cout<<"please re-enter"<<endl;
+                cin>>min;
+            }
+            cout<<"Enter the seconds:"<<endl;
+            cin>>sec;
+            if(sec>60){
+                cout<<"Invalid input."<<endl;
+                cout<<"please re-enter"<<endl;
+                cin>>sec;
+            }
+        }
+        void disp(){
+            cout<<setw(2)<<setfill('0');
+            cout<<hour<<":"<<min<<":"<<sec<<endl;
+        }
+        void tot(){
+            cout<<"Time in total seconds:"<<hour*3600+min*60+sec<<endl;
+        }
+        
+        
+    };
+int main()
+{ tym t1;
+t1.get();
+t1.disp();
+t1.tot();
+    return 0;
+}
